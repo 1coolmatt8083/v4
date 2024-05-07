@@ -105,6 +105,8 @@ function devTools() {
   }
 }
 
+
+
 /* url bar functions */
 function openWindow() {
     function openTabWithIframe(url) {
