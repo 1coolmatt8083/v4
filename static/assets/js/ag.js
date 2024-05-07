@@ -1,18 +1,34 @@
-function openAg(url, ag) {
-  localStorage.setItem("currentAg", ag)
-  
+/*function youtube() {
+  let URL = 'https://www.youtube.com/';
+  let urlToInject = window.location.origin + __uv$config.prefix + __uv$config.encodeUrl(URL);
+  const newWindow = window.open();
+  const iframe = newWindow.document.createElement('iframe');
+  newWindow.document.body.style.margin = '0';
+  iframe.style.width = '100%';
+  iframe.style.height = '100%';
+  iframe.style.position = 'fixed';
+  iframe.style.top = '0';
+  iframe.style.left = '0';
+  iframe.style.zIndex = '99999';
+  iframe.style.border = 'none';
+  newWindow.document.body.style.overflow = 'hidden';
+  newWindow.document.body.appendChild(iframe);
+  iframe.src = urlToInject;
+}*/
+
+function openAg(url) {
   agU = Ultraviolet.codec.xor.encode(url);
   localStorage.setItem('agUrl', agU);
   location.href = '/lessons';
 }
 
+window.navigator.serviceWorker.register("/sw.js", {
+  scope: __uv$config.prefix,
+});
+
 /*apps*/
 function gpt() {
   openAg('https://ub7.org');
-}
-
-function nf() {
-  alert('This app is still in development.\nCheck discord.gg/unblocking for details.');
 }
 
 function gemini() {
@@ -93,7 +109,7 @@ function onevone() {
 }
 
 function basketBros() {
-  openAg('https://basketbros.io');
+  openAg('https://derpman.codeberg.page/echo/@main/basketbros-io/');
 }
 
 function bitlife() {
@@ -105,7 +121,7 @@ function brebound() {
 }
 
 function cmg() {
-  openAg('https://coolmathgames.com', "CoolMath");
+  openAg('https://coolmathgames.com');
 }
 
 function crazygms() {
@@ -121,7 +137,7 @@ function holeio() {
 }
 
 function jstris() {
-  openAg('https://jstris.jezevec10.com');
+  openAg('https://jstris.jezevec10.com/');
 }
 
 function twoZeroFourEight() {
@@ -133,8 +149,7 @@ function p2048() {
 }
 
 function rbx() {
-  alert(`Note: Roblox should be working now, but if it still gives you an VPN/Proxy detection message, refresh it.`);
-  openAg('https://now.derpman.lol');
+  openAg('https://now.gg/iframe/snippet?app_pkg=com.roblox.client&partner=gamenora');
 }
 
 function slope() {
@@ -183,16 +198,16 @@ function rBowl() {
 `;
 
   function getRandomThreeDigitNumber() {
-    return Math.floor(Math.random() * 900) + 100;
+      return Math.floor(Math.random() * 900) + 100;
   }
 
   function getRandomAlphanumericString(length) {
-    const characters = 'abcdefghijklmnopqrstuvw0123456789012345';
-    let result = '';
-    for (let i = 0; i < length; i++) {
-      result += characters.charAt(Math.floor(Math.random() * characters.length));
-    }
-    return result;
+      const characters = 'abcdefghijklmnopqrstuvw0123456789012345';
+      let result = '';
+      for (let i = 0; i < length; i++) {
+          result += characters.charAt(Math.floor(Math.random() * characters.length));
+      }
+      return result;
   }
 
   var randomAlphanumericString = getRandomAlphanumericString(15);
@@ -239,16 +254,12 @@ function basketRandom() {
   openAg('https://files.twoplayergames.org/files/games/other/Basket_Random/index.html');
 }
 
-function volleyRandom() {
-  openAg('https://files.twoplayergames.org/files/games/o1/Volley_random/index.html');
-}
-
 function suikaWatermelon() {
   openAg('https://watermelongame.com');
 }
 
 function timeShooter3() {
-  openAg('https://html5.gamedistribution.com/rvvASMiM/6493b872f0564380a7adad671d1e0a57/index.html');
+  openAg('https://www.twoplayergames.org/embed/time-shooter-2');
 }
 
 function thereIsNoGame() {
@@ -285,20 +296,4 @@ function driftHunters() {
 
 function fBwG1() {
   openAg('https://ubg100.github.io/games/fbwg1/index.html');
-}
-
-function vex8() {
-  openAg('https://html5.gamedistribution.com/rvvASMiM/949009d40a2846f89f887de2285d6c28/index.html');
-}
-
-function tallManRun() {
-  openAg('https://html5.gamedistribution.com/rvvASMiM/7980c23fbbae4af6851e01052fce3cce/index.html');
-}
-
-function crowdRun3d() {
-  openAg('https://games.cdn.famobi.com/html5games/c/crowd-run-3d/v040/?fg_domain=play.famobi.com&fg_aid=A-SILVERGAMES&fg_uid=28ab613b-9f40-4ab7-8f09-aa19f32e3660&fg_pid=8a24e5f2-94a8-4593-b4e5-81cc68f524c8&fg_beat=093&original_ref=https%3A%2F%2Fwww.silvergames.com%2F');
-}
-
-function worldsHardestGm() {
-  openAg('https://assets.surfdoge.pro/assets/worldshardestgm.html');
 }
